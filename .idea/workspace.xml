@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- 1.20 update">
+    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- 1.20.1 update">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/TypingPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/TypingPacket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1.20" />
+        <entry key="$PROJECT_DIR$" value="1.20.1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,7 +115,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "1.20.1",
+    "git-widget-placeholder": "1.20.2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge",
@@ -284,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736955488001</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- 1.20.1 update">
+      <option name="closed" value="true" />
+      <created>1736956782675</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736956782675</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +319,7 @@
     <MESSAGE value="- Code cleanup" />
     <MESSAGE value="- Players nearby check implementation" />
     <MESSAGE value="- 1.20 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 1.20 update" />
+    <MESSAGE value="- 1.20.1 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 1.20.1 update" />
   </component>
 </project>

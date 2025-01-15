@@ -5,6 +5,7 @@ import me.orphey.typinginchat.configuration.ConfigLoader;
 import me.orphey.typinginchat.configuration.ConfigScreen;
 import me.orphey.typinginchat.mixin.ChatAccessor;
 import me.orphey.typinginchat.networking.PacketFactory;
+import me.orphey.typinginchat.networking.TypingPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraft.client.gui.screens.Screen;
@@ -97,7 +98,7 @@ public class TypingInChat
     private void onTyping() {
         if (!chatTyping) {
             chatTyping = true;
-            PacketFactory.sendPacket((byte) 1);
+            PacketFactory.sendToServer(new TypingPacket((byte) 1));
             if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Player is Typing"));
             }
@@ -108,7 +109,7 @@ public class TypingInChat
         if (chatTyping) {
             chatTyping = false;
             stoppedTypingCounter = 0;
-            PacketFactory.sendPacket((byte) 0);
+            PacketFactory.sendToServer(new TypingPacket((byte) 0));
             if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Player stopped typing"));
             }
@@ -121,7 +122,7 @@ public class TypingInChat
             chatTyping = false;
             chatTextBuf = "";
             stoppedTypingCounter = 0;
-            PacketFactory.sendPacket((byte) 0);
+            PacketFactory.sendToServer(new TypingPacket((byte) 0));
             if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Chat GUI closed!"));
             }
