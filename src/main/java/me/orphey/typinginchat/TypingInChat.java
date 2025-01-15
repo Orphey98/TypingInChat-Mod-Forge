@@ -1,6 +1,8 @@
 package me.orphey.typinginchat;
 
 import com.mojang.logging.LogUtils;
+import me.orphey.typinginchat.configuration.ConfigLoader;
+import me.orphey.typinginchat.configuration.ConfigScreen;
 import me.orphey.typinginchat.mixin.ChatAccessor;
 import me.orphey.typinginchat.networking.PacketFactory;
 import net.minecraft.client.Minecraft;
@@ -9,14 +11,17 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -39,24 +44,21 @@ public class TypingInChat
 
     public TypingInChat()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ConfigLoader.register();
+        ConfigLoader.loadConfig(FMLPaths.CONFIGDIR.get());
         PacketFactory.register();
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
+                new ConfigScreenHandler.ConfigScreenFactory((mc, screen) -> {
+                    return new ConfigScreen(screen);
+                })
+        );
     }
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
-        if (!ConfigLoader.getInstance().isEnableMod() || Minecraft.getInstance().player == null) {
+        if (!ConfigLoader.isEnableMod() || Minecraft.getInstance().player == null) {
             return;
         }
         Screen currentScreen = Minecraft.getInstance().screen;
@@ -72,7 +74,7 @@ public class TypingInChat
             onChatOpen();
         }
         boolean currentlyTyping = isTyping((ChatScreen) Minecraft.getInstance().screen);
-        if (currentlyTyping) {
+        if (currentlyTyping && playersNearby(Minecraft.getInstance())) {
             onTyping();
         }
         if (!currentlyTyping) {
@@ -87,7 +89,7 @@ public class TypingInChat
 
     private void onChatOpen() {
         chatOpen = true;
-        if (ConfigLoader.getInstance().isDebug()) {
+        if (ConfigLoader.isDebug()) {
             Minecraft.getInstance().player.sendSystemMessage(Component.literal("Chat GUI opened!"));
         }
     }
@@ -96,7 +98,7 @@ public class TypingInChat
         if (!chatTyping) {
             chatTyping = true;
             PacketFactory.sendPacket((byte) 1);
-            if (ConfigLoader.getInstance().isDebug()) {
+            if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Player is Typing"));
             }
         }
@@ -107,7 +109,7 @@ public class TypingInChat
             chatTyping = false;
             stoppedTypingCounter = 0;
             PacketFactory.sendPacket((byte) 0);
-            if (ConfigLoader.getInstance().isDebug()) {
+            if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Player stopped typing"));
             }
         }
@@ -120,7 +122,7 @@ public class TypingInChat
             chatTextBuf = "";
             stoppedTypingCounter = 0;
             PacketFactory.sendPacket((byte) 0);
-            if (ConfigLoader.getInstance().isDebug()) {
+            if (ConfigLoader.isDebug()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Chat GUI closed!"));
             }
         }
@@ -129,7 +131,7 @@ public class TypingInChat
     private boolean isTyping(ChatScreen chatScreen) {
         ChatAccessor chatScreenAccessor = (ChatAccessor) chatScreen;
         String chatText = chatScreenAccessor.getChatField().getValue();
-        if (ConfigLoader.getInstance().isIgnoreCommands() && isCommand(chatText)) {
+        if (ConfigLoader.isIgnoreCommands() && isCommand(chatText)) {
             return false;
         }
         if (chatText != null && !chatText.equals(chatTextBuf)) {
@@ -150,17 +152,5 @@ public class TypingInChat
     private boolean isCommand(String chatText) {
         String trimmedInput = chatText == null ? "" : chatText.trim();
         return !trimmedInput.isEmpty() && trimmedInput.charAt(0) == '/';
-    }
-
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
-        }
     }
 }
