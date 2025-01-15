@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- 1.20.1 update">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/TypingPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/TypingPacket.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- 1.20.1 update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,29 +90,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/Forge/forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor": "Run",
-    "Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge [createMcpToSrg].executor": "Run",
-    "Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge/forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor": "Run",
-    "Gradle.areyoutypingmodForge [build].executor": "Run",
-    "Gradle.areyoutypingmodForge [createMcpToSrg].executor": "Run",
-    "Gradle.forge-1.19.4-45.3.0-mdk [build] (1).executor": "Run",
-    "Gradle.forge-1.19.4-45.3.0-mdk [build] (2).executor": "Run",
-    "Gradle.forge-1.19.4-45.3.0-mdk [build].executor": "Run",
-    "Gradle.forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor": "Run",
-    "Gradle.forge-1.19.4-45.3.0-mdk [genIntellijRuns].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "1.20.2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/Forge/forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge/forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.areyoutypingmodForge [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.areyoutypingmodForge [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.forge-1.19.4-45.3.0-mdk [build] (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.forge-1.19.4-45.3.0-mdk [build] (2).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.forge-1.19.4-45.3.0-mdk [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.forge-1.19.4-45.3.0-mdk [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.forge-1.19.4-45.3.0-mdk [genIntellijRuns].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;1.20.2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ShadyS\Desktop\bukkit-dev\AreYouTypingMod\areyoutypingmodForge\src\main\resources" />
