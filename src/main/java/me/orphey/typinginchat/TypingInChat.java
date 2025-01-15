@@ -143,7 +143,7 @@ public class TypingInChat
     }
 
     private boolean playersNearby(Minecraft client) {
-        List<Player> nearbyPlayers = client.player.level.getEntitiesOfClass(
+        List<Player> nearbyPlayers = client.player.level().getEntitiesOfClass(
                 Player.class, client.player.getBoundingBox().inflate(25), p -> p != client.player
         );
         return !nearbyPlayers.isEmpty();

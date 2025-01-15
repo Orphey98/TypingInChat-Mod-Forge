@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- Code cleanup">
+    <list default="true" id="5a04ed5a-a3c0-45f5-bedc-0e313070f09f" name="Changes" comment="- Players nearby check implementation">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/areyoutypingmodForge.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/TypingInChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/configuration/ConfigScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/configuration/ConfigScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/orphey/typinginchat/networking/PacketFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="1.19.4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,7 +115,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "1.19.4",
+    "git-widget-placeholder": "1.20",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ShadyS/Desktop/bukkit-dev/AreYouTypingMod/areyoutypingmodForge",
@@ -266,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736942598994</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Players nearby check implementation">
+      <option name="closed" value="true" />
+      <created>1736942934045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736942934045</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +301,7 @@
     </ignored-roots>
     <MESSAGE value="- Config Screen update" />
     <MESSAGE value="- Code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code cleanup" />
+    <MESSAGE value="- Players nearby check implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Players nearby check implementation" />
   </component>
 </project>

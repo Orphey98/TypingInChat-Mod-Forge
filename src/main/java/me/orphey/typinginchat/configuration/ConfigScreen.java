@@ -1,6 +1,6 @@
 package me.orphey.typinginchat.configuration;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;
@@ -62,20 +62,23 @@ public class ConfigScreen extends Screen {
     }
 
     @Override
-    public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTicks) {
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
         // Render the dirt background
-        this.renderDirtBackground(poseStack);
+        this.renderDirtBackground(guiGraphics);
         // Render the screen elements
-        super.render(poseStack, mouseX, mouseY, partialTicks);
+        super.render(guiGraphics, mouseX, mouseY, partialTicks);
         // Optionally render a title
-        drawCenteredString(poseStack, this.font, this.title.getString(), this.width / 2, 20, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, this.title.getString(), this.width / 2, 20, 0xFFFFFF);
         // Check if mouse is hovering over a button and display a tooltip
-        this.renderButtonTooltips(poseStack, mouseX, mouseY);
+        this.renderButtonTooltips(guiGraphics, mouseX, mouseY);
     }
 
-    private void renderButtonTooltips(PoseStack poseStack, int mouseX, int mouseY) {
-        for (Button button : this.renderables.stream().filter(Button.class::isInstance).map(Button.class::cast).toList()) {
-            if (button.isHoveredOrFocused()) {
+    private void renderButtonTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+        for (Button button : this.renderables.stream()
+                .filter(Button.class::isInstance)
+                .map(Button.class::cast)
+                .toList()) {
+            if (button.isHovered()) {
                 // Tooltip text for each button
                 Component tooltip = switch (button.getMessage().getString()) {
                     case "Enable Mod: true", "Enable Mod: false" -> Component.literal("Toggle the mod's functionality.");
@@ -85,7 +88,8 @@ public class ConfigScreen extends Screen {
                 };
 
                 if (tooltip != null) {
-                    this.renderTooltip(poseStack, tooltip, mouseX, mouseY);
+                    // Use the renderTooltip method of GuiGraphics
+                    guiGraphics.renderTooltip(this.font, tooltip, mouseX, mouseY);
                 }
             }
         }

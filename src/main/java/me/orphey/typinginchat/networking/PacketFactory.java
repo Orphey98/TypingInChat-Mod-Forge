@@ -13,16 +13,20 @@ public class PacketFactory {
     private PacketFactory() {}
 
     public static final String PROTOCOL_VERSION = "1";
-    private static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-            new ResourceLocation("typinginchatmod", "typing_status"),
-            () -> PROTOCOL_VERSION,
-            PROTOCOL_VERSION::equals,
-            PROTOCOL_VERSION::equals
-    );
+    private static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
+            .named(new ResourceLocation("typinginchatmod", "typing_status"))
+            .networkProtocolVersion(() -> PROTOCOL_VERSION)
+            .clientAcceptedVersions(PROTOCOL_VERSION::equals)
+            .serverAcceptedVersions(PROTOCOL_VERSION::equals)
+            .simpleChannel();
 
     public static void register() {
         int id = 0;
-        CHANNEL.registerMessage(id++, TypingPacket.class, TypingPacket::encode, TypingPacket::decode, PacketFactory::handle);
+        CHANNEL.messageBuilder(TypingPacket.class, id++)
+                .encoder(TypingPacket::encode)
+                .decoder(TypingPacket::decode)
+                .consumerMainThread(PacketFactory::handle)
+                .add();
     }
 
     public static void sendPacket(byte message) {

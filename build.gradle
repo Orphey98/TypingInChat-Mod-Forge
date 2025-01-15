@@ -6,7 +6,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = 'forge-1.19.4-' + mod_version
+version = 'forge-1.20-' + mod_version
 group = mod_group_id
 
 base {
