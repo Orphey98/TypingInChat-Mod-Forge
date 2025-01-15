@@ -44,9 +44,6 @@ public class TypingInChat
 
     public TypingInChat()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -57,11 +54,6 @@ public class TypingInChat
                     return new ConfigScreen(screen);
                 })
         );
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
     }
 
     @SubscribeEvent
@@ -160,17 +152,5 @@ public class TypingInChat
     private boolean isCommand(String chatText) {
         String trimmedInput = chatText == null ? "" : chatText.trim();
         return !trimmedInput.isEmpty() && trimmedInput.charAt(0) == '/';
-    }
-
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
-        }
     }
 }
