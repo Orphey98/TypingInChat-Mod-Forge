@@ -12,12 +12,11 @@ For Fabric version go [HERE](https://github.com/Orphey98/TypingInChat-Mod)
 
 
 ## Options
-Mod creates small config file that you can edit via Forge Mods menu.
-
+Mod has small config that you can edit via ingame Mods menu.
 
 ## Related
 Link for server-side plugin 
 (required for servers):
-[TypingInChat-Plugin](https://github.com/Orphey98/TypingInChat-Plugin)
+[TypingInChat-Plugin](https://github.com/Orphey98/TypingInChat-Plugin) </br>
 Fabric repository:
 [TypingInChat-Mod-Fabric](https://github.com/Orphey98/TypingInChat-Mod)
