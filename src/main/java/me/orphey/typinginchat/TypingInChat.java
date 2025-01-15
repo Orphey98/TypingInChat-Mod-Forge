@@ -74,7 +74,7 @@ public class TypingInChat
             onChatOpen();
         }
         boolean currentlyTyping = isTyping((ChatScreen) Minecraft.getInstance().screen);
-        if (currentlyTyping) {
+        if (currentlyTyping && playersNearby(Minecraft.getInstance())) {
             onTyping();
         }
         if (!currentlyTyping) {
