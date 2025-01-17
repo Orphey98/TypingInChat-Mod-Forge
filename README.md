@@ -12,7 +12,7 @@ For Fabric & Quilt version go [HERE](https://github.com/Orphey98/TypingInChat-Mo
 | 1.19 | [1.19.4](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.19.4/typinginchat-forge-1.19.4-1.0.0.jar) |
 | 1.20 | [1.20](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20/typinginchat-forge-1.20-1.0.0.jar), [1.20.1](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.1/typinginchat-forge-1.20.1-1.0.0.jar), [1.20.2](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.2/typinginchat-forge-1.20.2-1.0.0.jar), [1.20.4](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.4/typinginchat-forge-1.20.4-1.0.0.jar)
 
-Unfortunately, I wasn't successful in further updates because of problems with mixins/mappings so no updates planned for now. You are welcome to contact me for this topic disgussion. 
+Unfortunately, I wasn't successful in further updates because of problems with mixins/mappings so no updates planned for now. You are welcome to contact me for this topic discussion. 
 
 ## Options
 Mod has small config that you can edit via ingame Mods menu.
