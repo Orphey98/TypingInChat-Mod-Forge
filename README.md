@@ -5,10 +5,13 @@ Client-side part for [TypingInChat-Plugin](https://github.com/Orphey98/TypingInC
 
 ## Installation
 **This is Forge repository** </br>
-For Fabric version go [HERE](https://github.com/Orphey98/TypingInChat-Mod)
+For Fabric & Quilt version go [HERE](https://github.com/Orphey98/TypingInChat-Mod)
 
 |  | Download appropriate version for your Forge client |
 | ------ | ------ |
+| 1.19 | [1.19.4](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.19.4/typinginchat-forge-1.19.4-1.0.0.jar) |
+| 1.20 | [1.20](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20/typinginchat-forge-1.20-1.0.0.jar), [1.20.1](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.1/typinginchat-forge-1.20.1-1.0.0.jar), [1.20.2](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.2/typinginchat-forge-1.20.2-1.0.0.jar),
+[1.20.4](https://github.com/Orphey98/TypingInChat-Mod-Forge/releases/download/1.20.4/typinginchat-forge-1.20.4-1.0.0.jar),
 
 
 ## Options
